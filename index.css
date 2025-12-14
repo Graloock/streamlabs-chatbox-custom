@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    /*text-shadow: 0 0 1px #000, 0 0 2px #000;*/
+    letter-spacing: 0.1em;
+    background: {background_color};
+    font-family: 'Chewy';
+    font-weight: 700;
+    font-size: {font_size};
+    line-height: 1.5em;
+    color: {text_color};
+}
+
+#log>div.left {
+    animation: fadeInLeft .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+    -webkit-animation: fadeInLeft .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+}
+
+#log>div.right {
+    animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+    -webkit-animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+}
+
+.colon {
+    display: none;
+}
+
+#log {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 10px 10px;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.badges {
+    display: inline-flex;
+    gap: 10px;
+}
+
+#log>div {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    background-color: #D9ECCF;
+    padding: 8px 16px;
+    margin-top: 64px;
+    border-radius: 24px;
+    border: 4px dashed #5D804A;
+
+}
+
+#log>div.left {
+    align-self: flex-start;
+    text-align: left;
+    border-bottom-left-radius: 0;
+}
+
+#log>div.right {
+    align-self: flex-end;
+    text-align: right;
+    border-bottom-right-radius: 0;
+}
+
+#log>div.deleted {
+    visibility: hidden;
+}
+
+#log .emote {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 0.4em 0.2em;
+    position: relative;
+}
+
+#log .emote img {
+    display: inline-block;
+    height: 1em;
+    opacity: 0;
+}
+
+#log .message,#log .meta {
+    vertical-align: top;
+    display: table-cell;
+    padding-bottom: 0.1em;
+}
+
+#log .meta {
+    top: -55px;
+    display: inline-flex;
+    gap: 16px;
+    align-items: center;
+    position: absolute;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#log .meta-left {
+    left: 12px;
+}
+
+#log .meta-right {
+    right: 12px;
+}
+
+#log .message {
+    word-wrap: anywhere;
+}
+
+#log .message-block {
+    position: relative;
+}
+
+.badge {
+    display: inline-block;
+    position: relative;
+    height: 1em;
+    vertical-align: middle;
+    top: -0.1em;
+}
+
+.name {
+    background-color: #4C7A54;
+    border: 4px solid #135030;
+    border-radius: 24px;
+    color: #D9ECCF;
+    padding: 2px 24px;
+}
